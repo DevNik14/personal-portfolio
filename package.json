@@ -4,7 +4,9 @@
   "description": "simple portfolio site with page.js for routing, lit-html for templating and gsap for very basic page tranitions",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
     "gsap": "^3.12.2",
     "lit-html": "^2.8.0",
     "page": "^1.11.6"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
   }
 }
