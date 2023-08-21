@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/DevNik14/personal-portfolio/issues"
   },
-  "homepage": "https://github.com/DevNik14/personal-portfolio#readme"
+  "homepage": "https://github.com/DevNik14/personal-portfolio#readme",
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "lit-html": "^2.8.0",
+    "page": "^1.11.6"
+  }
 }
