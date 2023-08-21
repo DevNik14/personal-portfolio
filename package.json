@@ -1,0 +1,19 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "simple portfolio site with page.js for routing, lit-html for templating and gsap for very basic page tranitions",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevNik14/personal-portfolio.git"
+  },
+  "author": "DevNik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevNik14/personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/DevNik14/personal-portfolio#readme"
+}
