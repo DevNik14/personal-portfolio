@@ -4,19 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
+  <script src="https://use.fontawesome.com/22883ba7a3.js"></script>
   <script type="module" src="src/app.js"></script>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <div class="container">
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-      </ul>
-    </nav>
+    <aside class="sidebar">
+      <div class="logo">
+        <p>&lt;&#47;DevNik&gt;</p>
+      </div>
+      <nav class="main-nav">
+        <ul class="body-text main-nav-list">
+          <li class="main-nav-item"><a class="link" href="/">Home</a></li>
+          <li class="main-nav-item"><a class="link" href="/about">About</a></li>
+          <li class="main-nav-item"><a class="link" href="/projects">Projects</a></li>
+          <li class="main-nav-item"><a class="link" href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="socials"></div>
+    </aside>
     <div id="root"></div>
   </div>
 </body>

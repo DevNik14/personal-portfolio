@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display:wght@500&family=Roboto:wght@300&display=swap');
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.heading-text {
+  font-family: 'Playfair Display', serif;
+}
+
+.body-text {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-nav-list {
+  padding: 0;
+  text-align: center;
+}
+
+.main-nav-item {
+  padding: 15px 0;
+}
