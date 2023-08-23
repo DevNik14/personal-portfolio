@@ -17,10 +17,6 @@ a {
   color: var(--main-color);
 }
 
-a:visited {
-  color: #fff;
-}
-
 ul {
   list-style-type: none;
 }
@@ -67,6 +63,10 @@ ul {
 
 .main-nav-item {
   padding: 15px 0;
+}
+
+.active {
+  color: var(--support-color);
 }
 
 .socials {

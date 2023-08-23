@@ -4,6 +4,7 @@ import { aboutView } from '../views/aboutView.js';
 import { projectsView } from '../views/projectsView.js';
 import { contactView } from '../views/contactView.js';
 import { renderMiddleware } from '../middlewares/renderMiddleware.js';
+import { changeActiveHandler } from '../utils/utils.js';
 
 page(renderMiddleware);
 
