@@ -7,14 +7,14 @@ const renderLayout = (ctx, template) => {
   gsap.to(root, {
     opacity: 0, 
     x: '-100%', 
-    duration: 0.5,
+    duration: 0.3,
     onComplete: () => {
       render(template, root); 
       gsap.set(root, { x: '100%', opacity: 0 }); 
       gsap.to(root, {
         x: '0%', 
         opacity: 1, 
-        duration: 0.5,
+        duration: 0.3,
       });
     },
   });
