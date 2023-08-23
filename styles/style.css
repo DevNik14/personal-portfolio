@@ -4,10 +4,12 @@
   --main-background: #1D1E1D;
   --main-nav-background: #171817;
   --main-color: #fff;
+  --support-color: #0074E4;
 }
 
 *, *::after, *::before {
   padding: 0;
+  overflow: hidden;
 }
 
 a {
@@ -46,6 +48,11 @@ ul {
   justify-content: center;
   flex-direction: column;
   background-color: var(--main-nav-background);
+}
+
+.sidebar a:hover {
+  color: var(--support-color);
+  transition: all 0.3s ease-out;
 }
 
 .logo {
