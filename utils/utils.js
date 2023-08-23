@@ -1,6 +1,7 @@
 const mainNavElement = document.querySelector('.main-nav');
 const navigationLinks = [...mainNavElement.querySelectorAll('a')];
 const logoElement = document.querySelector('.logo');
+const homeLink = navigationLinks.find(link => link.textContent == 'Home');
 
 const clearActiveClass = () => {
   navigationLinks.forEach(link => {
@@ -31,8 +32,11 @@ window.addEventListener('load' ,() => {
     .join('');
   const correctLinkItem = navigationLinks
     .find(link => link.textContent.toLowerCase() == pathname);
+
   if(correctLinkItem) {
     correctLinkItem.classList.add('active');
+  } else if(window.location.pathname == '/') {
+    homeLink.classList.add('active');
   } else {
     console.log('404');
   }
