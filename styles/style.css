@@ -94,10 +94,11 @@ ul {
 .home-header {
   font-size: 2.5rem;
   margin-left: 60px;
+  letter-spacing: .2rem;
 }
 
 .home-header span:hover {
   cursor: pointer;
   color: var(--support-color);
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }

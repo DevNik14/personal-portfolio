@@ -6,7 +6,7 @@ const root = document.querySelector('#root');
 const renderLayout = (ctx, template) => {
   gsap.to(root, {
     opacity: 0, 
-    x: '-100%', 
+    x: '100%', 
     duration: 0.5,
     onComplete: () => {
       render(template, root); 
