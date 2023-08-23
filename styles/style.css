@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display:wght@500&family=Roboto:wght@300&display=swap');
 
+*, *::after, *::before {
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -35,6 +39,11 @@ ul {
   flex-direction: column;
 }
 
+.logo {
+  position: absolute;
+  top: 17px;
+}
+
 .main-nav-list {
   padding: 0;
   text-align: center;
@@ -42,4 +51,13 @@ ul {
 
 .main-nav-item {
   padding: 15px 0;
+}
+
+.socials {
+  width: 100%;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: space-evenly;
 }
