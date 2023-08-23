@@ -1,5 +1,4 @@
 import page from 'page';
-import {render, html} from 'lit-html';
 import { homeView } from '../views/homeView.js';
 import { aboutView } from '../views/aboutView.js';
 import { projectsView } from '../views/projectsView.js';
