@@ -14,8 +14,25 @@ const logoLinkClickHandler = () => {
   mainNavElement.querySelector('a').classList.add('active');
 }
 
+const handleWindowLocationBehaviour = () => {
+  const pathname = window.location.pathname
+    .split('/')
+    .slice(1)
+    .join('');
+  const correctLinkItem = navigationLinks
+    .find(link => link.textContent.toLowerCase() == pathname);
+
+  if (correctLinkItem) {
+    correctLinkItem.classList.add('active');
+  } else if (window.location.pathname == '/') {
+    homeLink.classList.add('active');
+  } else {
+    console.log('404');
+  }
+}
+
 export const changeActiveHandler = (event) => {
-  if(event.target.tagName == 'A') {
+  if (event.target.tagName == 'A') {
     clearActiveClass();
     event.target.classList.add('active');
   }
@@ -24,20 +41,7 @@ export const changeActiveHandler = (event) => {
 mainNavElement.addEventListener('click', changeActiveHandler);
 logoElement.addEventListener('click', logoLinkClickHandler);
 
-window.addEventListener('load' ,() => {
+window.addEventListener('load', () => {
   clearActiveClass();
-  const pathname = window.location.pathname
-    .split('/')
-    .slice(1)
-    .join('');
-  const correctLinkItem = navigationLinks
-    .find(link => link.textContent.toLowerCase() == pathname);
-
-  if(correctLinkItem) {
-    correctLinkItem.classList.add('active');
-  } else if(window.location.pathname == '/') {
-    homeLink.classList.add('active');
-  } else {
-    console.log('404');
-  }
+  handleWindowLocationBehavior();
 })
