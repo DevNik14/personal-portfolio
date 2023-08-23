@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display:wght@500&family=Roboto:wght@300&display=swap');
 
-
+:root {
+  --main-background: #1D1E1D;
+  --main-nav-background: #171817;
+  --main-color: #fff;
+}
 
 *, *::after, *::before {
   padding: 0;
@@ -8,7 +12,7 @@
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--main-color);
 }
 
 a:visited {
@@ -30,7 +34,7 @@ ul {
 .container {
   display: flex;
   height: 100vh;
-  background-color: #1D1E1D;
+  background-color: var(--main-background);
   color: #fff;
 }
 
@@ -41,7 +45,7 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #171817;
+  background-color: var(--main-nav-background);
 }
 
 .logo {
