@@ -43,5 +43,5 @@ logoElement.addEventListener('click', logoLinkClickHandler);
 
 window.addEventListener('load', () => {
   clearActiveClass();
-  handleWindowLocationBehavior();
+  handleWindowLocationBehaviour();
 })
