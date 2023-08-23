@@ -7,7 +7,10 @@
   --support-color: #0074E4;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
+  margin: 0;
   padding: 0;
   overflow: hidden;
 }
@@ -28,6 +31,8 @@ ul {
 .body-text {
   font-family: 'Roboto Condensed', sans-serif;
 }
+
+/* Navigation Styles */
 
 .container {
   display: flex;
@@ -76,4 +81,23 @@ ul {
 .socials-list {
   display: flex;
   justify-content: space-evenly;
+}
+
+/* Home Section */
+
+.main-home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-header {
+  font-size: 2.5rem;
+  margin-left: 60px;
+}
+
+.home-header span:hover {
+  cursor: pointer;
+  color: var(--support-color);
+  transition: all 0.3s ease-out;
 }
