@@ -15,7 +15,7 @@ const aboutTemplate = () => html`
     </p>
   </section>
   <figure class="main-figure">
-    <img src="../assets/images/personal-picture.jpg" alt="personal-picture">
+    <img loading="lazy" src="../assets/images/personal-picture.jpg" alt="personal-picture">
   </figure>
 </main>
 `
