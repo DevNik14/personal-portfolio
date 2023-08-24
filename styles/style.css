@@ -15,6 +15,11 @@
   overflow: hidden;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 a {
   text-decoration: none;
   color: var(--main-color);
@@ -45,6 +50,7 @@ ul {
   width: 150px;
   height: 100%;
   display: flex;
+  flex: 0 0 150px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -101,4 +107,9 @@ ul {
   cursor: pointer;
   color: var(--support-color);
   transition: all 0.5s ease-out;
+}
+
+/* About Section */
+.main-about {
+  flex: 1;
 }
