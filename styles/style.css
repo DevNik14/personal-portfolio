@@ -40,7 +40,8 @@ ul {
 /* Navigation Styles */
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 150px 1fr;
   height: 100vh;
   background-color: var(--main-background);
   color: #fff;
@@ -111,5 +112,65 @@ ul {
 
 /* About Section */
 .main-about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.about-text {
   flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  color: var(--support-color);
+}
+
+.main-figure {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-figure img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.body-text {
+  margin-bottom: 15px;
+}
+
+.main-about {
+  max-width: 1000px;
+}
+
+.about-text {
+  max-width: 40%;
+}
+
+.main-figure {
+  max-width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .main-about {
+    flex-direction: column;
+    padding: 20px; 
+  }
+
+  .about-text, .main-figure {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px; 
+  }
 }
