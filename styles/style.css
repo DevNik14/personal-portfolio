@@ -165,13 +165,14 @@ ul {
 @media screen and (max-width: 768px) {
   .main-about {
     flex-direction: column;
-    padding: 20px; 
+    padding: 20px;
   }
 
-  .about-text, .main-figure {
+  .about-text,
+  .main-figure {
     max-width: 100%;
     text-align: center;
-    padding: 20px; 
+    padding: 20px;
   }
 }
 
@@ -186,7 +187,7 @@ ul {
 
 .projects-container {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(3, 300px);
 }
 
 .project {
@@ -203,6 +204,13 @@ ul {
   padding-bottom: 3.4em;
   margin: 0 5px;
 }
+
+.projects-heading {
+  padding: 30px 0;
+  color: var(--support-color);
+  font-size: 2.5rem;
+}
+
 .project .title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
@@ -212,6 +220,7 @@ ul {
   font-weight: 400;
   color: var(--support-color);
 }
+
 .project .price {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 0.9em;
