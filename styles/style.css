@@ -224,6 +224,11 @@ ul {
 .project-description .project-title {
   width: 100%;
   margin-bottom: 0.75rem;
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .project-title {
+  color: var(--support-color);
 }
 
 .project-footer {
