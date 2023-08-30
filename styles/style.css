@@ -260,3 +260,11 @@ ul {
 .links .link-item {
   margin-right: 1rem;
 }
+
+.links .link-item a {
+  transition: color 0.3s ease-out;
+}
+
+.links .link-item:hover{
+  color: var(--support-color);
+}
