@@ -265,6 +265,6 @@ ul {
   transition: color 0.3s ease-out;
 }
 
-.links .link-item:hover{
+.links .link-item:hover a{
   color: var(--support-color);
 }
