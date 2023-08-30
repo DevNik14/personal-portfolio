@@ -20,12 +20,12 @@ const projectsTemplate = () => html`
           </ul>
           <ul class="links">
             <li class="link-item">
-              <a href="github.com" target="_blank">
+              <a href="https://github.com/DevNik14" target="_blank">
                 <i class="fa fa-github" aria-hidden="true"></i>
               </a>
             </li>
             <li class="link-item">
-              <a href="github.com" target="_blank">
+              <a href="https://github.com/DevNik14" target="_blank">
                 <i class="fa fa-external-link" aria-hidden="true"></i>
               </a>
             </li>
@@ -48,12 +48,12 @@ const projectsTemplate = () => html`
           </ul>
           <ul class="links">
             <li class="link-item">
-              <a href="github.com" target="_blank">
+              <a href="https://github.com/DevNik14 target="_blank">
                 <i class="fa fa-github" aria-hidden="true"></i>
               </a>
             </li>
             <li class="link-item">
-              <a href="github.com" target="_blank">
+              <a href="https://github.com/DevNik14" target="_blank">
                 <i class="fa fa-external-link" aria-hidden="true"></i>
               </a>
             </li>
@@ -76,12 +76,12 @@ const projectsTemplate = () => html`
           </ul>
           <ul class="links">
             <li class="link-item">
-              <a href="github.com" target="_blank">
+              <a href="https://github.com/DevNik14" target="_blank">
                 <i class="fa fa-github" aria-hidden="true"></i>
               </a>
             </li>
             <li class="link-item">
-              <a href="github.com" target="_blank">
+              <a href="https://github.com/DevNik14" target="_blank">
                 <i class="fa fa-external-link" aria-hidden="true"></i>
               </a>
             </li>
