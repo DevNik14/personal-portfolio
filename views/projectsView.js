@@ -7,32 +7,50 @@ const projectsTemplate = () => html`
       <div class="project">
         <div class="project-description">
           <h3 class="project-title heading-text">Project Title</h3>
-          <p>
+          <p class="body-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </div>
-        <span class="price">$100</span>
+        <footer class="project-footer">
+          <ul class="project-tools-list body-text">
+            <li class="project-item">HTML</li>
+            <li class="project-item">HTML</li>
+            <li class="project-item">HTML</li>
+          </ul>
+        </footer>
       </div>
       <div class="project">
         <div class="project-description">
           <h3 class="project-title heading-text">Project Title</h3>
-          <p>
+          <p class="body-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </div>
-        <span class="price">$200</span>
+        <footer class="project-footer">
+          <ul class="project-tools-list body-text">
+            <li class="project-item">HTML</li>
+            <li class="project-item">HTML</li>
+            <li class="project-item">HTML</li>
+          </ul>
+        </footer>
       </div>
       <div class="project">
         <div class="project-description">
           <h3 class="project-title heading-text">Project Title</h3>
-          <p>
+          <p class="body-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </div>
-        <span class="price">$300</span>
+        <footer class="project-footer">
+          <ul class="project-tools-list body-text">
+            <li class="project-item">HTML</li>
+            <li class="project-item">HTML</li>
+            <li class="project-item">HTML</li>
+          </ul>
+        </footer>
       </div>
     </section>
   </main>
