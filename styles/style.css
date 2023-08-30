@@ -58,9 +58,12 @@ ul {
   background-color: var(--main-nav-background);
 }
 
+.sidebar a {
+  transition: color 0.3s ease-out;
+ }
+
 .sidebar a:hover {
   color: var(--support-color);
-  transition: all 0.3s ease-out;
 }
 
 .logo {
@@ -104,10 +107,13 @@ ul {
   letter-spacing: .2rem;
 }
 
-.home-header span:hover {
+.home-header span {
+  transition: color 0.3s ease-out;
   cursor: pointer;
+}
+
+.home-header span:hover {
   color: var(--support-color);
-  transition: all 0.5s ease-out;
 }
 
 /* About Section */
