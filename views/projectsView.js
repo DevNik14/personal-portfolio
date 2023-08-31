@@ -1,5 +1,4 @@
 import { render, html } from 'lit-html';
-import {hoverProjectTitle} from '../src/projectTitleHoverColor.js';
 
 const projectsTemplate = () => html`
   <main class="main-projects">
