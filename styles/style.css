@@ -224,12 +224,12 @@ ul {
 .project-description .project-title {
   width: 100%;
   margin-bottom: 0.75rem;
-  transition: color 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.project:hover .project-title {
+/* .project-description:hover .project-title {
   color: var(--support-color);
-}
+} */
 
 .project-footer {
   width: 100%;
@@ -262,9 +262,10 @@ ul {
 }
 
 .links .link-item a {
+  color: #fff;
   transition: color 0.3s ease-out;
 }
 
-.links .link-item:hover a{
+.links a:hover{
   color: var(--support-color);
 }
