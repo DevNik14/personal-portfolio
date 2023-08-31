@@ -1,7 +1,5 @@
 export const hoverProjectTitle = () => window.addEventListener('load', () => {
-  const isIncludesProjectLink = (element) => {
-    return [...element.classList].includes('project-link')
-  }
+  const isIncludesProjectLink = (element) => [...element.classList].includes('project-link');
 
   const projectContainer = document.querySelectorAll('.project');
 
