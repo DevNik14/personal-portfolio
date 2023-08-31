@@ -1,4 +1,7 @@
 import { render, html } from 'lit-html';
+import {hoverProjectTitle} from '../src/projectTitleHoverColor.js';
+
+hoverProjectTitle();
 
 const projectsTemplate = () => html`
   <main class="main-projects">
@@ -91,33 +94,6 @@ const projectsTemplate = () => html`
     </section>
   </main>
 `
-
-window.addEventListener('load', () => {
-  console.log('loaded');
-  const isIncludesProjectLink = (element) => {
-    return [...element.classList].includes('project-link')
-  }
-
-  const projectContainer = document.querySelectorAll('.project');
-
-  projectContainer.forEach(el => {
-    el.addEventListener('mouseover', (event) => {
-      if(!isIncludesProjectLink(event.target)) {
-        event.currentTarget.querySelector('.project-title').style.color = 'var(--support-color)';
-      } else {
-        event.currentTarget.querySelector('.project-title').style.color = '#fff';
-      }
-    })
-  })
-
-  projectContainer.forEach(el => {
-    el.addEventListener('mouseleave', (event) => {
-      if(!isIncludesProjectLink(event.target)) {
-        event.currentTarget.querySelector('.project-title').style.color = '#fff';
-      }
-    })
-  })
-})
 
 export const projectsView = (ctx, next) => {
   ctx.render(projectsTemplate());
