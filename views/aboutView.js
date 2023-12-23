@@ -11,7 +11,6 @@ const aboutTemplate = () => html`
     </p>
     <p class="body-text">
     Beyond coding, I'm a competitive soul,  I embrace every opportunity to learn and improve.
-    Sharing my web development journey is something I enjoy, and I'm open to collaborating and growing with fellow developers.
     </p>
   </section>
   <figure class="main-figure">
