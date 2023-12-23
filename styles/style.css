@@ -271,3 +271,10 @@ ul {
 .links a:hover{
   color: var(--support-color);
 }
+
+/* @media (width <= 1200px) {
+  .projects-container {
+    grid-template-columns: repeat(1, 300px);
+    gap: 5px;
+  }
+} */

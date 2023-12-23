@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "description": "simple portfolio site with page.js for routing, lit-html for templating and gsap for very basic page tranitions",
+  "description": "simple portfolio site with page.js for routing, lit-html for templating",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/DevNik14/personal-portfolio#readme",
   "dependencies": {
-    "gsap": "^3.12.2",
     "lit-html": "^2.8.0",
     "page": "^1.11.6"
   },
