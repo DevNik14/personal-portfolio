@@ -7,6 +7,10 @@
   --support-color: #0165fc;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--main-background);
