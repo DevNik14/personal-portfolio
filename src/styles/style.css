@@ -69,3 +69,19 @@ a:hover {
   width: 20px;
   height: 20px;
 }
+
+@media (width <= 768px) {
+  .sidebar {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: min(75vw, 350px);
+    z-index: 9;
+  }
+
+  .social-links svg {
+    width: 25px;
+    height: 25px;
+  }
+}
