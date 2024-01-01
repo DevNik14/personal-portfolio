@@ -82,6 +82,10 @@ a:hover {
 }
 
 @media (width <= 768px) {
+  a:hover {
+    color: var(--main-color);
+  }
+  
   .sidebar {
     font-size: 1.2rem;
     position: fixed;
