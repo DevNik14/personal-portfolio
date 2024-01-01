@@ -67,6 +67,10 @@ a:hover {
   margin: 5px 0;
 }
 
+.nav-link.active {
+  color: var(--support-color);
+}
+
 .social-links li:first-child {
   margin-bottom: 10px;
 }
