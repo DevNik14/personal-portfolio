@@ -4,7 +4,7 @@
   --main-background: #1D1E1D;
   --main-nav-background: #171817;
   --main-color: #fff;
-  --support-color: #0074E4;
+  --support-color: #0165fc;
 }
 
 html {
@@ -28,4 +28,13 @@ ul {
 a, a:visited {
   color: var(--main-color);
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--support-color);
+}
+
+.sidebar {
+  background-color: var(--main-nav-background);
+  text-transform: capitalize;
 }
