@@ -15,6 +15,7 @@ body {
   background-color: var(--main-background);
   color: var(--main-color);
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 h1,
@@ -48,6 +49,12 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  overflow: hidden;
+}
+
+.mobile-navigation-icon {
+  display: none;
+  cursor: pointer;
 }
 
 .site-navigation ul {
@@ -73,15 +80,55 @@ a:hover {
 @media (width <= 768px) {
   .sidebar {
     font-size: 1.2rem;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: -100%;
     top: 0;
     width: min(75vw, 350px);
     z-index: 9;
+    padding: 50px 10px;
+    transition: all 0.3s ease-in;
+  }
+
+  .sidebar.to-left {
+    right: 0;
+    top: 0;
   }
 
   .social-links svg {
     width: 25px;
     height: 25px;
+  }
+
+  .mobile-navigation-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    width: 30px;
+    height: 24px;
+  }
+
+  .mobile-navigation-icon.open-navigation {
+    z-index: 10;
+  }
+
+  .mobile-navigation-icon.open-navigation div:first-child {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .mobile-navigation-icon.open-navigation div:nth-child(2) {
+    display: none;
+  }
+
+  .mobile-navigation-icon.open-navigation div:last-child {
+    transform: rotate(45deg) translate(-8px, -10px);
+  }
+
+  .mobile-navigation-icon div {
+    width: 100%;
+    height: 3px;
+    background-color: var(--support-color);
   }
 }
