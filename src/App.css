@@ -28,3 +28,7 @@ a, a:visited {
   color: var(--main-color);
   text-decoration: none;
 }
+
+section {
+  height: 100vh;
+}
