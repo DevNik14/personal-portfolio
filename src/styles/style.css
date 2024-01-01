@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Roboto:wght@300&display=swap');
+
+:root {
+  --main-background: #1D1E1D;
+  --main-nav-background: #171817;
+  --main-color: #fff;
+  --support-color: #0074E4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--main-background);
+  color: var(--main-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+}
