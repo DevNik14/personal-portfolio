@@ -39,3 +39,7 @@ a:hover {
   background-color: var(--main-nav-background);
   text-transform: capitalize;
 }
+
+.social-links svg {
+  fill: currentColor;
+}
