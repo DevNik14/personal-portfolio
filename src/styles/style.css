@@ -4,7 +4,7 @@
   --main-background: #1D1E1D;
   --main-nav-background: #171817;
   --main-color: #fff;
-  --support-color: #0165fc;
+  --support-color: #0066FF;
 }
 
 html {
@@ -32,6 +32,7 @@ a, a:visited {
 
 a:hover {
   color: var(--support-color);
+  transition: all 0.25s ease-in-out;
 }
 
 .sidebar {
