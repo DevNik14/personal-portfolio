@@ -17,7 +17,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Merriweather', serif;
 }
 
@@ -25,7 +27,8 @@ ul {
   list-style-type: none;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--main-color);
   text-decoration: none;
 }
@@ -38,8 +41,31 @@ a:hover {
 .sidebar {
   background-color: var(--main-nav-background);
   text-transform: capitalize;
+  width: 150px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.site-navigation ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.site-navigation ul li {
+  margin: 5px 0;
+}
+
+.social-links li:first-child {
+  margin-bottom: 10px;
 }
 
 .social-links svg {
   fill: currentColor;
+  width: 20px;
+  height: 20px;
 }
