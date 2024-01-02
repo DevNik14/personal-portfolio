@@ -155,20 +155,24 @@ a:hover {
   transition-delay: 500ms;
 }
 
-.socials .social-links ul li:nth-child(3) {
+.social-links li:nth-child(1) {
+  transition-delay: 600ms;
+}
+
+.social-links li:nth-child(2) {
   transition-delay: 700ms;
 }
 
 .hero .hero-line:nth-child(1) {
-  transition-delay: 800ms;
-}
-
-.hero .hero-line:nth-child(2) {
   transition-delay: 900ms;
 }
 
-.hero .hero-line:nth-child(3) {
+.hero .hero-line:nth-child(2) {
   transition-delay: 1000ms;
+}
+
+.hero .hero-line:nth-child(3) {
+  transition-delay: 1100ms;
 }
 
 /* end staggering */
