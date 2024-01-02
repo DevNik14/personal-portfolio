@@ -93,15 +93,34 @@ a:hover {
 
 .hero {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  justify-content: center;
+  padding-left: 75px;
+}
+
+.hero-line h1 {
+  color: var(--support-color);
+  font-size: 24px;
+}
+
+.hero-line h2 {
+  font-size: clamp(40px, 8vw, 80px);
 }
 
 .content section {
   height: 100vh;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
   a:hover {
     color: var(--main-color);
+  }
+
+  .hero {
+    padding-left: 60px;
   }
 
   .sidebar {
