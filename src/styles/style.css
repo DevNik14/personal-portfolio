@@ -85,7 +85,7 @@ a:hover {
   a:hover {
     color: var(--main-color);
   }
-  
+
   .sidebar {
     font-size: 1.2rem;
     position: fixed;
@@ -118,18 +118,6 @@ a:hover {
     height: 24px;
     z-index: 10;
   }
-
-  /* .mobile-navigation-icon.open-navigation div:first-child {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .mobile-navigation-icon.open-navigation div:nth-child(2) {
-    display: none;
-  }
-
-  .mobile-navigation-icon.open-navigation div:last-child {
-    transform: rotate(45deg) translate(-8px, -10px);
-  } */
 
   .mobile-navigation-icon div {
     width: 100%;
