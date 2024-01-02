@@ -4,6 +4,7 @@
   --main-background: #1D1E1D;
   --main-nav-background: #171817;
   --main-color: #fff;
+  --hero-support-color: #ccc;
   --support-color: #0066FF;
   --sidebar-width: 150px;
 }
@@ -110,8 +111,35 @@ a:hover {
   font-size: clamp(40px, 8vw, 80px);
 }
 
+.hero-line h3 {
+  color: var(--hero-support-color);
+}
+
 .content section {
   height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s;
+}
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hero .hero-line:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.hero .hero-line:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.hero .hero-line:nth-child(4) {
+  transition-delay: 600ms;
 }
 
 @media (width <=768px) {
