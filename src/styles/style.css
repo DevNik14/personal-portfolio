@@ -5,6 +5,7 @@
   --main-nav-background: #171817;
   --main-color: #fff;
   --support-color: #0066FF;
+  --sidebar-width: 150px;
 }
 
 html {
@@ -39,10 +40,15 @@ a:hover {
   transition: all 0.25s ease-in-out;
 }
 
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
 .sidebar {
   background-color: var(--main-nav-background);
   text-transform: capitalize;
-  width: 150px;
+  width: var(--sidebar-width);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -79,6 +85,14 @@ a:hover {
   fill: currentColor;
   width: 20px;
   height: 20px;
+}
+
+.content {
+  width: calc(100vw - var(--sidebar-width));
+}
+
+.hero {
+  width: 100%;
 }
 
 @media (width <= 768px) {
