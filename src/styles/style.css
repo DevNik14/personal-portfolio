@@ -180,6 +180,10 @@ a:hover {
 
 .about {
   min-height: 900px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about h2 {
