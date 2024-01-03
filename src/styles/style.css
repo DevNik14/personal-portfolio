@@ -178,6 +178,10 @@ a:hover {
   transition-delay: 1100ms;
 }
 
+.about {
+  min-height: 900px;
+}
+
 .about h2 {
   margin: 10px 0 40px;
 }
@@ -207,7 +211,23 @@ a:hover {
 }
 
 .skills li {
+  padding-left: 20px;
+  margin-bottom: 5px;
   font-size: 15px;
+  position: relative;
+}
+
+.skills li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--support-color);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 
 .about-img {
