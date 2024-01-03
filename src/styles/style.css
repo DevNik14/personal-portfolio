@@ -178,6 +178,10 @@ a:hover {
   transition-delay: 1100ms;
 }
 
+.about h2 {
+  margin: 10px 0 40px;
+}
+
 .about-content {
   display: grid;
   grid-template-columns: 3fr 2fr;
