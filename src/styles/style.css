@@ -184,6 +184,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition-delay: 500ms;
 }
 
 .about h2 {
