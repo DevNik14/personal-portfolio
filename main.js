@@ -27,6 +27,7 @@ navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
 if (currentHashLocation) {
   const currentSection = document.querySelector(`.${currentHashLocation}`);
   currentSection.scrollIntoView();
+  
   const isSectionSelected = navigationLinkElements
     .find(link => link.textContent === currentHashLocation);
   if (isSectionSelected) {
@@ -39,7 +40,6 @@ if(window.screen.width <= 768) {
     console.log(window.screenY);
   })
 }
-
 
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver(entries => {
