@@ -92,6 +92,10 @@ a:hover {
   height: 20px;
 }
 
+.content {
+  margin: 0 auto;
+}
+
 .hero {
   width: 100%;
   display: flex;
@@ -99,7 +103,6 @@ a:hover {
   height: 100vh;
   min-height: 100vh;
   justify-content: center;
-  padding-left: 75px;
 }
 
 .hero-line h1 {
@@ -175,6 +178,20 @@ a:hover {
   transition-delay: 1100ms;
 }
 
+.about-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+
+.about-text div p .job-link {
+  color: var(--support-color);
+}
+
+.about-text div p {
+  margin-bottom: 10px;
+}
+
 .skills {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -183,6 +200,14 @@ a:hover {
   margin: 20px 0px 0px;
   overflow: hidden;
   list-style: none;
+}
+
+.skills li {
+  font-size: 15px;
+}
+
+.about-img {
+  max-width: 300px;
 }
 
 /* end staggering */
