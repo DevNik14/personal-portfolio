@@ -269,6 +269,7 @@ a:hover {
 
 .role-list p {
   font-size: 14px;
+  margin: 15px 0;
 }
 
 .role-list li,
@@ -331,5 +332,16 @@ a:hover {
     width: 100%;
     height: 3px;
     background-color: var(--support-color);
+  }
+}
+
+@media (width <= 600px) {
+  .tabs {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .tabs li {
+    margin-right: 10px;
   }
 }
