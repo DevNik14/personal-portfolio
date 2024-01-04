@@ -272,6 +272,24 @@ a:hover {
   margin: 15px 0;
 }
 
+.role-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.role-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--support-color);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
 .role-list li,
 .tabs li {
   margin-top: 10px;
@@ -339,7 +357,7 @@ a:hover {
   .experience-content {
     display: block;
   }
-  
+
   .tabs {
     display: flex;
     margin-bottom: 15px;
