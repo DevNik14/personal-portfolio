@@ -336,6 +336,10 @@ a:hover {
 }
 
 @media (width <= 600px) {
+  .experience-content {
+    display: block;
+  }
+  
   .tabs {
     display: flex;
     margin-bottom: 15px;
