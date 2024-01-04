@@ -241,6 +241,17 @@ a:hover {
 
 /* end staggering */
 
+@media (width <=1024px) {
+  .about-content {
+    display: block;
+  }
+
+  .about-img {
+    width: 70%;
+    margin: 50px auto 0;
+  }
+}
+
 @media (width <=768px) {
   a:hover {
     color: var(--main-color);
