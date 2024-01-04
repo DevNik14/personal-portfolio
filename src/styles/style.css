@@ -94,6 +94,7 @@ a:hover {
 
 .content {
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .hero {
@@ -179,7 +180,6 @@ a:hover {
 }
 
 .about {
-  min-height: 900px;
   max-width: 900px;
   display: flex;
   flex-direction: column;
