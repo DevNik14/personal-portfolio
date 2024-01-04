@@ -35,11 +35,11 @@ if (currentHashLocation) {
   }
 }
 
-if(window.screen.width <= 768) {
-  window.addEventListener('scroll', (e) => {
-    console.log(window.screenY);
-  })
-}
+// if(window.screen.width <= 768) {
+//   window.addEventListener('scroll', (e) => {
+//     console.log(window.top);
+//   })
+// }
 
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver(entries => {
