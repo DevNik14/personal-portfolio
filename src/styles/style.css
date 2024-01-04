@@ -284,7 +284,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 50px;
     width: 30px;
