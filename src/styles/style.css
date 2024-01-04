@@ -181,6 +181,7 @@ a:hover {
 
 .about {
   max-width: 900px;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
