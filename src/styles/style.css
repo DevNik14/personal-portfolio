@@ -255,6 +255,14 @@ a:hover {
   grid-template-columns: 1fr 3fr;
 }
 
+.years li {
+  cursor: pointer;
+}
+
+.years li {
+  color: var(--support-color);
+}
+
 .role-list li,
 .years li {
   margin-bottom: 5px;
