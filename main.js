@@ -2,6 +2,9 @@ const sidebarNivagationElement = document.querySelector('.sidebar');
 const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
 const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
 const currentHashLocation = window.location.hash.split('#')[1];
+const tabElements = document.querySelectorAll('.tab-items');
+
+//handle navigation
 
 if (mobileNavigationIcon) {
   mobileNavigationIcon.addEventListener('click', () => {
@@ -10,10 +13,10 @@ if (mobileNavigationIcon) {
   })
 }
 
-const clearActiveLinks = () => navigationLinkElements.forEach(link => link.classList.remove('active'));
+const clearActiveElements = (elements) => [...elements].forEach(link => link.classList.remove('active'));
 
 navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
-  clearActiveLinks();
+  clearActiveElements(navigationLinkElements);
   if (link.textContent.trim() === "</DevNik>") {
     navigationLinkElements
       .find(link => link.textContent === "home")
@@ -41,6 +44,9 @@ if (currentHashLocation) {
 //   })
 // }
 
+//end handling navigation
+
+//add animations on scroll
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -51,3 +57,7 @@ const observer = new IntersectionObserver(entries => {
 })
 
 hiddenElements.forEach(el => observer.observe(el));
+
+//end add animations on scroll
+
+//handle experience tab items
