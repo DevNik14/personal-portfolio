@@ -61,3 +61,7 @@ hiddenElements.forEach(el => observer.observe(el));
 //end add animations on scroll
 
 //handle experience tab items
+tabElements.forEach(tabElement => tabElement.addEventListener('click', (e) => {
+  clearActiveElements(tabElements);
+  tabElement.classList.add('active');
+}))
