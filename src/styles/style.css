@@ -241,6 +241,8 @@ a:hover {
 
 /* end staggering */
 
+/* responsive design */
+
 @media (width <=1024px) {
   .about-content {
     display: block;
@@ -255,10 +257,6 @@ a:hover {
 @media (width <=768px) {
   a:hover {
     color: var(--main-color);
-  }
-
-  .hero {
-    padding-left: 60px;
   }
 
   .sidebar {
