@@ -179,6 +179,8 @@ a:hover {
   transition-delay: 1100ms;
 }
 
+/* end staggering */
+
 .about {
   max-width: 900px;
   min-height: 900px;
@@ -240,7 +242,28 @@ a:hover {
   max-width: 300px;
 }
 
-/* end staggering */
+.experience {
+  max-width: 900px;
+}
+
+.experience h2 {
+  margin: 10px 0 40px;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.role-list li,
+.years li {
+  margin-bottom: 5px;
+}
+
+.role-list li:last-child,
+.years li:last-child {
+  margin-bottom: 0;
+}
 
 /* responsive design */
 
