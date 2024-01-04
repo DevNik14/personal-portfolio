@@ -112,7 +112,7 @@ a:hover {
 }
 
 .hero-line h2 {
-  font-size: clamp(40px, 8vw, 80px);
+  font-size: clamp(40px, 5vw, 80px);
 }
 
 .hero-line h3 {
