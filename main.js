@@ -91,7 +91,12 @@ Object.keys(experienceList)
     tabsListElement.appendChild(liElement);
   });
 
-const initRoleList = (experienceKey = 'Upwork') => {
+const initRoleList = (experienceKey = 'Upwork', isThereFirstTabItem = true) => {
+  if(isThereFirstTabItem) {
+    const firstItem = document.querySelector('.tabs .tab-items');
+    firstItem.classList.add('active');
+  }
+  
   const rolesFragment = document.createDocumentFragment();
   const experienceListValues = Object.values(experienceList[experienceKey]);
   const roleListElement = document.createElement('ul');
@@ -122,6 +127,6 @@ tabsListElement.addEventListener('click', (e) => {
     if(roleDescriptionElement.children[0]) roleDescriptionElement.children[0].remove();
     e.target.classList.add('active');
 
-    initRoleList(e.target.textContent);
+    initRoleList(e.target.textContent, false);
   }
 })
