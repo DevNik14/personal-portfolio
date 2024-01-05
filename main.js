@@ -1,3 +1,5 @@
+import rolesData from './roles.json';
+
 const sidebarNivagationElement = document.querySelector('.sidebar');
 const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
 const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
@@ -62,26 +64,7 @@ hiddenElements.forEach(el => observer.observe(el));
 
 //handle experience tab items
 const tabsListElement = document.querySelector('.tabs');
-const experienceList = {
-  "Upwork": {
-    "job-title": "Freelance front-end developer",
-    "from-year": "May 2018",
-    "untill": "October 2019",
-    roles: ["Translated PSD designs into responsive and pixel-perfect HTML/CSS, ensuring accurate representation of the original design.",
-      "Implemented responsive design for webpages using CSS media queries or Bootstrap, ensuring optimal user experience across various devices and screen sizes.",
-      "Refactored legacy JavaScript code into modern ECMAScript 6 (ES6+) code, enhancing readability and leveraging the latest language features.",
-      "Developed and integrated various functionalities, such as modals and sliders, to enhance user interactions and improve overall user experience.",
-      "Engaged in the Agile development methodology, actively contributing to Scrum processes and participating in iterative sprints."]
-  },
-  "Break": {
-    "job-title": "Personal Break",
-    "from-year": "2020",
-    "untill": "2023",
-    roles: [
-      "During this time, I took a break to focus on personal development, overcome challenges, and prepare for my return to the tech industry."
-    ]
-  }
-};
+const experienceList = rolesData;
 
 Object.keys(experienceList)
   .forEach(key => {
