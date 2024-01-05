@@ -15,7 +15,7 @@ if (mobileNavigationIcon) {
 
 const clearActiveElements = (elements) => [...elements].forEach(link => link.classList.remove('active'));
 
-navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
+navigationLinkElements.forEach(link => link.addEventListener('click', () => {
   clearActiveElements(navigationLinkElements);
   if (link.textContent.trim() === "</DevNik>") {
     navigationLinkElements
@@ -89,33 +89,39 @@ Object.keys(experienceList)
     liElement.textContent = key;
     liElement.classList.add('tab-items');
     tabsListElement.appendChild(liElement);
+  });
+
+const initRoleList = (experienceKey = 'Upwork') => {
+  const rolesFragment = document.createDocumentFragment();
+  const experienceListValues = Object.values(experienceList[experienceKey]);
+  const roleListElement = document.createElement('ul');
+  roleListElement.classList.add('role-list');
+  const roleH3Element = document.createElement('h3');
+  const rolePElement = document.createElement('p');
+  roleH3Element.textContent = experienceListValues[0];
+  rolesFragment.appendChild(roleH3Element);
+
+  rolePElement.textContent = `${experienceListValues[1]} - ${experienceListValues[2]}`;
+  rolesFragment.appendChild(rolePElement);
+  experienceListValues[3].forEach(x => {
+    const roleLiElement = document.createElement('li');
+    roleLiElement.textContent = x;
+    roleLiElement.classList.add('role-item');
+    rolesFragment.appendChild(roleLiElement);
   })
+  roleListElement.appendChild(rolesFragment);
+  roleDescriptionElement.appendChild(roleListElement);
+}
+
+initRoleList();
 
 tabsListElement.addEventListener('click', (e) => {
   if (e.target.classList.value == 'tab-items') {
     const tabItems = document.querySelectorAll('.tab-items');
     clearActiveElements(tabItems);
-    roleDescriptionElement.children[0].remove();
+    if(roleDescriptionElement.children[0]) roleDescriptionElement.children[0].remove();
     e.target.classList.add('active');
 
-    const rolesFragment = document.createDocumentFragment();
-    const experienceListValues = Object.values(experienceList[e.target.textContent]);
-    const roleListElement = document.createElement('ul');
-    roleListElement.classList.add('role-list');
-    const roleH3Element = document.createElement('h3');
-    const rolePElement = document.createElement('p');
-    roleH3Element.textContent = experienceListValues[0];
-    rolesFragment.appendChild(roleH3Element);
-
-    rolePElement.textContent = `${experienceListValues[1]} - ${experienceListValues[2]}`;
-    rolesFragment.appendChild(rolePElement);
-    experienceListValues[3].forEach(x => {
-      const roleLiElement = document.createElement('li');
-      roleLiElement.textContent = x;
-      roleLiElement.classList.add('role-item');
-      rolesFragment.appendChild(roleLiElement);
-    })
-    roleListElement.appendChild(rolesFragment);
-    roleDescriptionElement.appendChild(roleListElement);
+    initRoleList(e.target.textContent);
   }
 })
