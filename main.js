@@ -96,7 +96,7 @@ const initRoleList = (experienceKey = 'Upwork', isThereFirstTabItem = true) => {
     const firstItem = document.querySelector('.tabs .tab-items');
     firstItem.classList.add('active');
   }
-  
+
   const rolesFragment = document.createDocumentFragment();
   const experienceListValues = Object.values(experienceList[experienceKey]);
   const roleListElement = document.createElement('ul');
@@ -109,10 +109,10 @@ const initRoleList = (experienceKey = 'Upwork', isThereFirstTabItem = true) => {
   rolePElement.textContent = `${experienceListValues[1]} - ${experienceListValues[2]}`;
   rolesFragment.appendChild(rolePElement);
   experienceListValues[3].forEach(x => {
-    const roleLiElement = document.createElement('li');
-    roleLiElement.textContent = x;
-    roleLiElement.classList.add('role-item');
-    rolesFragment.appendChild(roleLiElement);
+    const roleListItemElement = document.createElement('li');
+    roleListItemElement.textContent = x;
+    roleListItemElement.classList.add('role-item');
+    rolesFragment.appendChild(roleListItemElement);
   })
   roleListElement.appendChild(rolesFragment);
   roleDescriptionElement.appendChild(roleListElement);
