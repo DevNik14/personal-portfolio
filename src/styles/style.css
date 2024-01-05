@@ -244,6 +244,9 @@ a:hover {
 
 .experience {
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .experience h2 {
@@ -353,7 +356,7 @@ a:hover {
   }
 }
 
-@media (width <= 600px) {
+@media (width <=600px) {
   .experience-content {
     display: block;
   }
