@@ -35,27 +35,12 @@ if (currentHashLocation) {
 
   const isSectionSelected = navigationLinkElements
     .find(link => link.textContent === currentHashLocation);
+
   if (isSectionSelected) {
     isSectionSelected.classList.add('active');
   }
 }
 
-const sectionElements = document.querySelectorAll('section');
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const intersectingSectionId = entry.target.id;
-      const foundNavLink = [...document.querySelectorAll('.site-navigation .nav-link')].find(link => link.getAttribute('href').slice(1) === intersectingSectionId);
-      if(foundNavLink) {
-        clearActiveElements(navigationLinkElements);
-        foundNavLink.classList.add('active');
-        window.location.href = `#${intersectingSectionId}`;
-      }
-    }
-  })
-}, { threshold: 0.75 })
-
-sectionElements.forEach(el => sectionObserver.observe(el));
 
 // if(window.screen.width <= 768) {
 //   window.addEventListener('scroll', (e) => {
