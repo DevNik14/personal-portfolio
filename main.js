@@ -41,7 +41,6 @@ if (currentHashLocation) {
   }
 }
 
-
 // if(window.screen.width <= 768) {
 //   window.addEventListener('scroll', (e) => {
 //     console.log(window.top);
