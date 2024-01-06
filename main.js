@@ -49,6 +49,7 @@ const sectionObserver = new IntersectionObserver(entries => {
       if(foundNavLink) {
         clearActiveElements(navigationLinkElements);
         foundNavLink.classList.add('active');
+        window.location.href = `#${intersectingSectionId}`;
       }
     }
   })
