@@ -40,6 +40,22 @@ if (currentHashLocation) {
   }
 }
 
+const sectionElements = document.querySelectorAll('section');
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const intersectingSectionId = entry.target.id;
+      const foundNavLink = [...document.querySelectorAll('.site-navigation .nav-link')].find(link => link.getAttribute('href').slice(1) === intersectingSectionId);
+      if(foundNavLink) {
+        clearActiveElements(navigationLinkElements);
+        foundNavLink.classList.add('active');
+      }
+    }
+  })
+}, { threshold: 0.75 })
+
+sectionElements.forEach(el => sectionObserver.observe(el));
+
 // if(window.screen.width <= 768) {
 //   window.addEventListener('scroll', (e) => {
 //     console.log(window.top);
@@ -75,7 +91,7 @@ Object.keys(experienceList)
   });
 
 const initRoleList = (experienceKey = 'Upwork', isThereFirstTabItem = true) => {
-  if(isThereFirstTabItem) {
+  if (isThereFirstTabItem) {
     const firstItem = document.querySelector('.tabs .tab-items');
     firstItem.classList.add('active');
   }
@@ -107,7 +123,7 @@ tabsListElement.addEventListener('click', (e) => {
   if (e.target.classList.value == 'tab-items') {
     const tabItems = document.querySelectorAll('.tab-items');
     clearActiveElements(tabItems);
-    if(roleDescriptionElement.children[0]) roleDescriptionElement.children[0].remove();
+    if (roleDescriptionElement.children[0]) roleDescriptionElement.children[0].remove();
     e.target.classList.add('active');
 
     initRoleList(e.target.textContent, false);
