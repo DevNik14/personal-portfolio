@@ -82,8 +82,12 @@ a:hover {
   color: var(--support-color);
 }
 
-.social-links li:first-child {
+.social-links li {
   margin-bottom: 10px;
+}
+
+.social-links li:last-child {
+  margin-bottom: 0;
 }
 
 svg {
@@ -166,6 +170,10 @@ svg {
 
 .social-links li:nth-child(2) {
   transition-delay: 700ms;
+}
+
+.social-links li:nth-child(3) {
+  transition-delay: 800ms;
 }
 
 .hero .hero-line:nth-child(1) {
