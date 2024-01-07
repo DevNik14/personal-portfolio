@@ -86,7 +86,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.social-links svg {
+svg {
   fill: currentColor;
   width: 20px;
   height: 20px;
