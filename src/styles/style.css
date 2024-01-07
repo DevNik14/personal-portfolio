@@ -304,6 +304,11 @@ a:hover {
   /* display: none; */
 }
 
+.project-card {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
 /* responsive design */
 
 @media (width <=1024px) {
