@@ -304,6 +304,10 @@ svg {
   /* display: none; */
 }
 
+.card-title h3 {
+  color: var(--support-color);
+}
+
 .projects h2 {
   margin: 0 0 20px;
 }
