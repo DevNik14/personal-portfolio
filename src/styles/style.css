@@ -304,9 +304,33 @@ a:hover {
   /* display: none; */
 }
 
+.projects h2 {
+  margin: 0 0 20px;
+}
+
 .project-card {
   display: grid;
   grid-template-columns: 3fr 2fr;
+  margin-bottom: 50px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.used-technologies-list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.used-technologies-list ul li, .links-to ul li {
+  margin: 0px 20px 5px 0;
+}
+
+.links-to ul {
+  display: flex;
 }
 
 /* responsive design */
