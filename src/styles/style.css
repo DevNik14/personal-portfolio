@@ -51,7 +51,7 @@ a:hover {
 .sidebar {
   background-color: var(--main-nav-background);
   text-transform: capitalize;
-  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
   height: 100vh;
   position: sticky;
   top: 0;
@@ -297,6 +297,11 @@ a:hover {
 .role-list li,
 .tabs li {
   margin-top: 10px;
+}
+
+.projects {
+  max-width: 1000px;
+  /* display: none; */
 }
 
 /* responsive design */
