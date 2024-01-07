@@ -347,13 +347,13 @@ svg {
 }
 
 .contacts {
-  max-width: 600px;
+  max-width: 650px;
   text-align: center;
   margin: 0 auto;
 }
 
 .contacts h2 {
-  margin: 0 0 50px;
+  margin: 0 0 20px;
 }
 
 /* responsive design */
