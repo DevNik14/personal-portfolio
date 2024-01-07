@@ -346,6 +346,16 @@ svg {
   display: flex;
 }
 
+.contacts {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contacts h2 {
+  margin: 0 0 50px;
+}
+
 /* responsive design */
 
 @media (width <=1024px) {
