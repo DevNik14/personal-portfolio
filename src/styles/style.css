@@ -356,6 +356,17 @@ svg {
   margin: 0 0 20px;
 }
 
+.contacts-content div {
+  margin-top: 50px;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid var(--support-color);
+  display: inline-block;
+}
+
+.contacts-content div a:hover {
+  color: var(--main-color);
+}
+
 /* responsive design */
 
 @media (width <=1024px) {
