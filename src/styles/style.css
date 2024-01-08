@@ -367,6 +367,11 @@ svg {
   color: var(--main-color);
 }
 
+.footer {
+  padding: 70px 0;
+  text-align: center;
+}
+
 /* responsive design */
 
 @media (width <=1024px) {
