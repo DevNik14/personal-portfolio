@@ -75,6 +75,7 @@ a:hover {
 .mobile-navigation-icon {
   display: none;
   cursor: pointer;
+  transition: all 2s;
 }
 
 .site-navigation ul {
@@ -425,7 +426,7 @@ svg {
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    right: 20px;
+    right: 35px;
     top: 20px;
     width: 30px;
     height: 24px;

@@ -2,7 +2,7 @@ import rolesData from './roles.json';
 
 const sidebarNivagationElement = document.querySelector('.sidebar');
 const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
-const navigationLinkElements = [...document.querySelectorAll('.site-navigation .nav-link')];
+const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
 const currentHashLocation = window.location.hash.split('#')[1];
 const roleDescriptionElement = document.querySelector('.role-description');
 
@@ -21,6 +21,10 @@ navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
   clearActiveElements(navigationLinkElements);
   if (link.textContent.trim() !== "</DevNik>") {
     link.classList.add('active');
+  }
+  if(mobileNavigationIcon) {
+    sidebarNivagationElement.classList.remove('to-left');
+    mobileNavigationIcon.classList.remove('open-navigation');
   }
 }))
 
