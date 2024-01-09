@@ -41,7 +41,6 @@ a:visited {
 a:hover {
   color: var(--support-color);
   transition: all 0.25s ease-in-out;
-  cursor: pointer;
 }
 
 .layout {
