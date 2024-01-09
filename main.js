@@ -24,6 +24,7 @@ navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
   clearActiveElements(navigationLinkElements);
   if (link.textContent.trim() !== "</DevNik>") {
     link.classList.add('active');
+    window.location.href = `#${linkText}`;
   }
 }))
 
