@@ -19,7 +19,7 @@ const clearActiveElements = (elements) => [...elements].forEach(link => link.cla
 
 navigationLinkElements.forEach(link => link.addEventListener('click', () => {
   clearActiveElements(navigationLinkElements);
-  if(link.textContent.trim() !== "</DevNik>") {
+  if (link.textContent.trim() !== "</DevNik>") {
     link.classList.add('active');
   }
 }))
@@ -45,7 +45,7 @@ if (currentHashLocation) {
 //end handling navigation
 
 const getParentSectionId = (childElement) => {
-  if(childElement.tagName === 'ARTICLE') {
+  if (childElement.tagName === 'ARTICLE') {
     return childElement.parentNode.parentNode.id;
   }
 }
@@ -57,14 +57,13 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
       const sectionId = entry.target.id || getParentSectionId(entry.target);
-      if(sectionId && sectionId !== 'hero') {
+      if (sectionId && sectionId !== 'hero') {
         clearActiveElements(navigationLinkElements)
         navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
       }
     }
   })
-}, {threshold: 0.65})
-
+}, { threshold: 0.65 })
 
 hiddenElements.forEach(el => observer.observe(el));
 
@@ -125,7 +124,7 @@ tabsListElement.addEventListener('click', (e) => {
 const divEmailWrapperElement = document.querySelector('.contacts-content div');
 
 divEmailWrapperElement.addEventListener('click', (e) => {
-  if(e.target.tagName !== 'A') {
+  if (e.target.tagName !== 'A') {
     const emailText = divEmailWrapperElement.querySelector('a').textContent;
     navigator.clipboard.writeText(emailText);
   }
