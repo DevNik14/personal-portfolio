@@ -18,13 +18,9 @@ if (mobileNavigationIcon) {
 const clearActiveElements = (elements) => [...elements].forEach(link => link.classList.remove('active'));
 
 navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
-  e.preventDefault();
-  const linkText = link.textContent;
-  document.querySelector(`.${linkText}`).scrollIntoView();
   clearActiveElements(navigationLinkElements);
   if (link.textContent.trim() !== "</DevNik>") {
     link.classList.add('active');
-    window.location.href = `#${linkText}`;
   }
 }))
 
