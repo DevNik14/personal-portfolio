@@ -433,6 +433,10 @@ svg {
     display: flex;
     flex-direction: column;
   }
+
+  .project-image {
+    margin-top: 20px;
+  }
 }
 
 @media (width <=600px) {
