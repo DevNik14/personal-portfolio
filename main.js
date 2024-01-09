@@ -2,7 +2,7 @@ import rolesData from './roles.json';
 
 const sidebarNivagationElement = document.querySelector('.sidebar');
 const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
-const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
+const navigationLinkElements = [...document.querySelectorAll('.site-navigation .nav-link')];
 const currentHashLocation = window.location.hash.split('#')[1];
 const roleDescriptionElement = document.querySelector('.role-description');
 
@@ -19,12 +19,7 @@ const clearActiveElements = (elements) => [...elements].forEach(link => link.cla
 
 navigationLinkElements.forEach(link => link.addEventListener('click', () => {
   clearActiveElements(navigationLinkElements);
-  if (link.textContent.trim() === "</DevNik>") {
-    navigationLinkElements
-      .find(link => link.textContent === "home")
-      .classList
-      .add('active');
-  } else {
+  if(link.textContent.trim() !== "</DevNik>") {
     link.classList.add('active');
   }
 }))
@@ -49,15 +44,27 @@ if (currentHashLocation) {
 
 //end handling navigation
 
+const getParentSectionId = (childElement) => {
+  if(childElement.tagName === 'ARTICLE') {
+    return childElement.parentNode.parentNode.id;
+  }
+}
+
 //add animations on scroll
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
+      const sectionId = entry.target.id || getParentSectionId(entry.target);
+      if(sectionId && sectionId !== 'hero') {
+        clearActiveElements(navigationLinkElements)
+        navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
+      }
     }
   })
-})
+}, {threshold: 0.65})
+
 
 hiddenElements.forEach(el => observer.observe(el));
 
