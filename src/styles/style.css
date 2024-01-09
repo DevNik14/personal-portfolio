@@ -22,6 +22,15 @@ body {
   overflow-x: hidden;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.content.blured {
+  filter: blur(5px);
+}
+
 h1,
 h2,
 h3 {
