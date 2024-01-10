@@ -387,7 +387,18 @@ svg {
   fill: var(--support-color);
 }
 
-.contacts-content div a:hover {
+.show-copied-message {
+  position: absolute;
+  font-size: 13px;
+  top: -35px;
+  background: var(--support-color);
+  border-radius: 30px;
+  padding: 5px 10px;
+  right: 0;
+  transition: all .5s ease-in;
+}
+
+.contacts-content .email-info a:hover {
   color: var(--main-color);
 }
 
