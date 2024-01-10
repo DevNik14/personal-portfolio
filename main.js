@@ -6,6 +6,7 @@ const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
 const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
 const currentHashLocation = window.location.hash.split('#')[1];
 const roleDescriptionElement = document.querySelector('.role-description');
+const scrollToTopElement = document.querySelector('.scroll-to-top');
 
 //handle navigation
 
@@ -25,7 +26,7 @@ navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
   }
   if(mobileNavigationIcon) {
     sidebarNivagationElement.classList.remove('to-left');
-    mobileNavigationIcon.classList.remove('open-navigation');
+    mobileNavigationIcon.classList.remove('open');
   }
 }))
 
@@ -41,11 +42,22 @@ if (currentHashLocation) {
   }
 }
 
-// if(window.screen.width <= 768) {
-//   window.addEventListener('scroll', (e) => {
-//     console.log(window.top);
-//   })
-// }
+if(window.screen.width <= 768) {
+  window.addEventListener('scroll', (e) => {
+    const currentScrollY = window.scrollY;
+    if(currentScrollY >= 250) {
+      scrollToTopElement.classList.add('show');
+    } else {
+      scrollToTopElement.classList.remove('show');
+    }
+  })
+}
+
+if(scrollToTopElement) {
+  scrollToTopElement.addEventListener('click', () => {
+    document.querySelector('.hero').scrollIntoView();
+  })
+}
 
 //end handling navigation
 
