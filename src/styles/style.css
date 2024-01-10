@@ -75,7 +75,6 @@ a:hover {
 .mobile-navigation-icon {
   display: none;
   cursor: pointer;
-  transition: all 2s;
 }
 
 .site-navigation ul {
@@ -447,21 +446,59 @@ svg {
   }
 
   .mobile-navigation-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    right: 35px;
-    top: 20px;
-    width: 30px;
-    height: 24px;
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    right: 20px;
+    top: 37px;
     z-index: 10;
   }
 
-  .mobile-navigation-icon div {
+  .mobile-navigation-icon span {
+    background: var(--support-color);
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
     width: 100%;
-    height: 3px;
-    background-color: var(--support-color);
+    height: 4px;
+    transition-duration: 500ms
+  }
+
+  .mobile-navigation-icon span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  .mobile-navigation-icon span:nth-child(2){
+    top:13px;
+    left: 0px;
+    opacity:1;
+  }
+  .mobile-navigation-icon span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+  .mobile-navigation-icon:not(.open):hover span:nth-child(1){
+    transform: rotate(0deg) scaleY(1.1);
+  }
+  .mobile-navigation-icon:not(.open):hover span:nth-child(2){
+    transform: rotate(0deg) scaleY(1.1);
+  }
+  .mobile-navigation-icon:not(.open):hover span:nth-child(3){
+    transform: rotate(0deg) scaleY(1.1);
+  }
+  .mobile-navigation-icon.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .mobile-navigation-icon.open span:nth-child(2){
+    opacity:0;
+  }
+  .mobile-navigation-icon.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 13px;
   }
 
   .project-card {

@@ -11,7 +11,7 @@ const roleDescriptionElement = document.querySelector('.role-description');
 if (mobileNavigationIcon) {
   mobileNavigationIcon.addEventListener('click', () => {
     sidebarNivagationElement.classList.toggle('to-left');
-    mobileNavigationIcon.classList.toggle('open-navigation');
+    mobileNavigationIcon.classList.toggle('open');
   })
 }
 
@@ -125,7 +125,7 @@ tabsListElement.addEventListener('click', (e) => {
   }
 })
 
-const copyEmailElement = document.querySelector('.contacts-content .copy-icon svg');
+const copyEmailElement = document.querySelector('.contacts-content .copy-icon');
 
 copyEmailElement.addEventListener('click', (e) => {
   if (e.target.tagName !== 'A') {
