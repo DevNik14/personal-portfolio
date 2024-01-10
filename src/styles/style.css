@@ -429,7 +429,7 @@ svg {
   justify-content: center;
   visibility: visible;
   opacity: 1;
-  transition: all .5s ease-in;
+  transition: all .3s ease-in-out;
 }
 
 /* responsive design */

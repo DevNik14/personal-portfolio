@@ -24,7 +24,7 @@ navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
   if (link.textContent.trim() !== "</DevNik>") {
     link.classList.add('active');
   }
-  if(mobileNavigationIcon) {
+  if (mobileNavigationIcon) {
     sidebarNivagationElement.classList.remove('to-left');
     mobileNavigationIcon.classList.remove('open');
   }
@@ -42,10 +42,10 @@ if (currentHashLocation) {
   }
 }
 
-if(window.screen.width <= 768) {
+if (window.screen.width <= 768) {
   window.addEventListener('scroll', (e) => {
     const currentScrollY = window.scrollY;
-    if(currentScrollY >= 250) {
+    if (currentScrollY >= 250) {
       scrollToTopElement.classList.add('show');
     } else {
       scrollToTopElement.classList.remove('show');
@@ -53,9 +53,11 @@ if(window.screen.width <= 768) {
   })
 }
 
-if(scrollToTopElement) {
+if (scrollToTopElement) {
   scrollToTopElement.addEventListener('click', () => {
-    document.querySelector('.hero').scrollIntoView();
+    const heroSection = document.querySelector('.hero')
+    heroSection.scrollIntoView();
+    window.location.hash = `#${heroSection.id}`;
   })
 }
 
@@ -144,7 +146,7 @@ copyEmailElement.addEventListener('click', (e) => {
   if (e.target.tagName !== 'A') {
     const emailText = copyEmailElement.parentNode.parentNode.querySelector('a').textContent;
     navigator.clipboard.writeText(emailText);
-    
+
     const tooltipElement = document.createElement('span');
     tooltipElement.textContent = 'Copied';
     tooltipElement.classList.add('show-copied-message');
