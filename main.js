@@ -124,12 +124,3 @@ tabsListElement.addEventListener('click', (e) => {
     initRoleList(e.target.textContent, false);
   }
 })
-
-const divEmailWrapperElement = document.querySelector('.contacts-content div');
-
-divEmailWrapperElement.addEventListener('click', (e) => {
-  if (e.target.tagName !== 'A') {
-    const emailText = divEmailWrapperElement.querySelector('a').textContent;
-    navigator.clipboard.writeText(emailText);
-  }
-})
