@@ -82,7 +82,7 @@ const observer = new IntersectionObserver(entries => {
       }
     }
   })
-}, { threshold: 0.65 })
+}, { threshold: 0.5 })
 
 hiddenElements.forEach(el => observer.observe(el));
 
