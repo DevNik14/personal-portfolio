@@ -125,11 +125,11 @@ tabsListElement.addEventListener('click', (e) => {
   }
 })
 
-const divEmailWrapperElement = document.querySelector('.contacts-content div');
+const copyEmailElement = document.querySelector('.contacts-content .copy-icon svg');
 
-divEmailWrapperElement.addEventListener('click', (e) => {
+copyEmailElement.addEventListener('click', (e) => {
   if (e.target.tagName !== 'A') {
-    const emailText = divEmailWrapperElement.querySelector('a').textContent;
+    const emailText = copyEmailElement.parentNode.parentNode.querySelector('a').textContent;
     navigator.clipboard.writeText(emailText);
   }
 })
