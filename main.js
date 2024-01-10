@@ -1,4 +1,5 @@
-import rolesData from './roles.json';
+import rolesData from './src/data/roles.json';
+import projectsData from './src/data/projects.json';
 
 const sidebarNivagationElement = document.querySelector('.sidebar');
 const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
