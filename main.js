@@ -77,7 +77,7 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add('show');
       const sectionId = entry.target.id || getParentSectionId(entry.target);
       if (sectionId && sectionId !== 'hero') {
-        clearActiveElements(navigationLinkElements)
+        clearActiveElements(navigationLinkElements);
         navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
       }
     }
