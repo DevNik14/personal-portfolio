@@ -1,29 +1,44 @@
-{
-  "Project Title 1": {
+[
+  {
+    "project-title": "Project-title",
     "project-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloribus voluptate labore maxime, non cum? Earum praesentium distinctio non consequuntur hic, iure voluptates nobis voluptas eaque sint officiis quis adipisci.",
-    "used-technologies-list": ["JS", "JS", "JS"],
-    "links-to": [
-      {"url-github": "https://github.com/DevNik14", "svg-path": "./src/assets/icons/github"}, 
-      {"link": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/", "svg-path": "./src/assets/icons/link"}
+    "used-technologies-list": [
+      "JS",
+      "JS",
+      "JS"
     ],
+    "url-github": "https://github.com/DevNik14",
+    "github-svg-path": "./src/assets/icons/github.svg",
+    "url-to-project": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/",
+    "svg-url": "./src/assets/icons/link.svg",
     "img-src": "./src/assets/images/test-project-image.png"
   },
-  "Project Title 2": {
+  {
+    "project-title": "Project-title",
     "project-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloribus voluptate labore maxime, non cum? Earum praesentium distinctio non consequuntur hic, iure voluptates nobis voluptas eaque sint officiis quis adipisci.",
-    "used-technologies-list": ["JS", "JS", "JS"],
-    "links-to": [
-      {"url-github": "https://github.com/DevNik14", "svg-path": "./src/assets/icons/github"}, 
-      {"link": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/", "svg-path": "./src/assets/icons/link"}
+    "used-technologies-list": [
+      "JS",
+      "JS",
+      "JS"
     ],
+    "url-github": "https://github.com/DevNik14",
+    "github-svg-path": "./src/assets/icons/github.svg",
+    "url-to-project": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/",
+    "url-svg-path": "./src/assets/icons/link.svg",
     "img-src": "./src/assets/images/test-project-image.png"
   },
-  "Project Title 3": {
+  {
+    "project-title": "Project-title",
     "project-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloribus voluptate labore maxime, non cum? Earum praesentium distinctio non consequuntur hic, iure voluptates nobis voluptas eaque sint officiis quis adipisci.",
-    "used-technologies-list": ["JS", "JS", "JS"],
-    "links-to": [
-      {"url-github": "https://github.com/DevNik14", "svg-path": "./src/assets/icons/github"}, 
-      {"link": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/", "svg-path": "./src/assets/icons/link"}
+    "used-technologies-list": [
+      "JS",
+      "JS",
+      "JS"
     ],
+    "url-github": "https://github.com/DevNik14",
+    "github-svg-path": "./src/assets/icons/github.svg",
+    "url-to-project": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/",
+    "svg-url": "./src/assets/icons/link.svg",
     "img-src": "./src/assets/images/test-project-image.png"
   }
-}
+]

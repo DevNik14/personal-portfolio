@@ -140,6 +140,57 @@ tabsListElement.addEventListener('click', (e) => {
   }
 })
 
+// handle dynamic project section
+console.log(projectsData);
+const projectsContentElement = document.querySelector('.projects .projects-content');
+projectsData.forEach(project => {
+  const articleProjectElement = document.createElement('article');
+  const projectDetailsElement = document.createElement('div');
+  const cardTitleElement = document.createElement('div');
+  const titleh3Element = document.createElement('h3');
+  const projectDescriptionElement = document.createElement('div');
+  const projectDescriptionText = document.createElement('p');
+  const usedTechnologiesListElement = document.createElement('div');
+  const usedTechnologiesList = document.createElement('ul');
+  const linksToElement = document.createElement('div');
+  const linksToListElement = document.createElement('ul');
+
+  articleProjectElement.classList.add('project-card');
+  articleProjectElement.classList.add('hidden');
+
+  projectDetailsElement.classList.add('project-details');
+  projectDescriptionElement.classList.add('project-description');
+  projectDescriptionText.textContent = project['project-description'];
+
+  cardTitleElement.classList.add('card-title');
+  titleh3Element.textContent = project['project-title'];
+
+  usedTechnologiesListElement.classList.add('used-technologies-list');
+  project['used-technologies-list'].forEach(el => {
+    const usedTechnologiesItem = document.createElement('li');
+    usedTechnologiesItem.textContent = el;
+    usedTechnologiesList.appendChild(usedTechnologiesItem);
+  })
+
+  linksToElement.classList.add('links-to');
+
+  cardTitleElement.appendChild(titleh3Element);
+  projectDetailsElement.appendChild(cardTitleElement);
+  articleProjectElement.appendChild(projectDetailsElement);
+
+  projectDescriptionElement.appendChild(projectDescriptionText);
+  projectDetailsElement.appendChild(projectDescriptionElement);
+
+  usedTechnologiesListElement.appendChild(usedTechnologiesList);
+  projectDetailsElement.appendChild(usedTechnologiesListElement);
+
+  linksToElement.appendChild(linksToListElement);
+  projectDetailsElement.appendChild(linksToElement);
+
+  console.log(articleProjectElement);
+})
+// end handle dynamic project section
+
 const copyEmailElement = document.querySelector('.contacts-content .copy-icon');
 
 copyEmailElement.addEventListener('click', (e) => {
