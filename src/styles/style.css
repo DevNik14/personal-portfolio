@@ -99,10 +99,8 @@ a:hover {
   margin-bottom: 0;
 }
 
-svg {
-  fill: currentColor;
-  width: 20px;
-  height: 20px;
+i {
+  font-size: 20px;
 }
 
 .content {
@@ -378,13 +376,13 @@ svg {
   position: absolute;
   cursor: pointer;
   right: 10px;
-  bottom: 18px;
+  bottom: 15px;
   padding: 5px;
   border-radius: 5px;
 }
 
-.copy-icon svg {
-  fill: var(--support-color);
+.copy-icon i {
+  color: var(--main-color);
 }
 
 .show-copied-message {
