@@ -466,7 +466,7 @@ svg {
     top: 0;
   }
 
-  .social-links svg {
+  i {
     width: 25px;
     height: 25px;
   }
