@@ -364,7 +364,7 @@ i {
   margin: 0 0 20px;
 }
 
-.contacts-content>div {
+.contacts-content > div {
   position: relative;
   margin-top: 50px;
   padding: 1.25rem 3.5rem 1.25rem 1.75rem;
@@ -382,7 +382,7 @@ i {
 }
 
 .copy-icon i {
-  color: var(--main-color);
+  color: var(--support-color);
 }
 
 .show-copied-message {
@@ -462,11 +462,6 @@ i {
   .sidebar.to-left {
     right: 0;
     top: 0;
-  }
-
-  i {
-    width: 25px;
-    height: 25px;
   }
 
   .mobile-navigation-icon {
