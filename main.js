@@ -170,19 +170,6 @@ projectsData.forEach(project => {
   githubAnchor.href = project['url-github'];
   githubAnchor.target = '_blank';
   githubAnchor.rel = 'noopener noreferrer';
-  // const githubSvg = document.createElement('svg');
-  // githubSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-  // githubSvg.setAttribute('viewBox', '0 0 496 512');
-
-  // // Use the SVG path from JSON
-  // const githubPath = document.createElement('path');
-  // githubPath.setAttribute('d', project['github-svg-path']);
-  // githubPath.setAttribute('fill', 'currentColor');
-  // githubSvg.appendChild(githubPath);
-
-  // githubAnchor.appendChild(githubSvg);
-  // githubLink.appendChild(githubAnchor);
-  // linksList.appendChild(githubLink);
 
   // Create an <i> element for Font Awesome
   const githubIcon = document.createElement('i');
@@ -198,16 +185,7 @@ projectsData.forEach(project => {
   projectAnchor.href = project['url-to-project'];
   projectAnchor.target = '_blank';
   projectAnchor.rel = 'noopener noreferrer';
-  // const projectUrlSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  // projectUrlSvg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-  // projectUrlSvg.setAttribute('height', '25');
-  // projectUrlSvg.setAttribute('width', '25');
-  // projectUrlSvg.setAttribute('viewBox', '0 0 512 512');
 
-  // Use the SVG path from JSON
-  // const projetUrlPath = document.createElement('path');
-  // projetUrlPath.setAttribute('d', project['url-svg-path']);
-  // projetUrlPath.style.fill = 'currentColor';
   const urlIcon = document.createElement('i');
   urlIcon.classList.add('fa-solid', 'fa-arrow-up-right-from-square');
 
