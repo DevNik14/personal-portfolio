@@ -1,11 +1,5 @@
 import domElements from "./domElements";
 
-const sidebarNivagationElement = document.querySelector('.sidebar');
-const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
-const currentHashLocation = window.location.hash.split('#')[1];
-const navigationElement = document.querySelector('.site-navigation ul');
-const scrollToTopElement = document.querySelector('.scroll-to-top');
-
 if (mobileNavigationIcon) {
   mobileNavigationIcon.addEventListener('click', () => {
     sidebarNivagationElement.classList.toggle('to-left');
@@ -26,11 +20,11 @@ navigationElement.addEventListener('click', (e) => {
 })
 
 if (currentHashLocation) {
-  const currentSection = document.querySelector(`.${currentHashLocation}`);
+  const currentSection = document.querySelector(`.${domElements.currentHashLocation}`);
   currentSection.scrollIntoView();
 
   const isSectionSelected = domElements.navigationLinkElements
-    .find(link => link.textContent === currentHashLocation);
+    .find(link => link.textContent === domElements.currentHashLocation);
 
   if (isSectionSelected) {
     isSectionSelected.classList.add('active');
