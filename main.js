@@ -21,9 +21,7 @@ const clearActiveElements = (elements) => [...elements].forEach(link => link.cla
 
 navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
   clearActiveElements(navigationLinkElements);
-  if (link.textContent.trim() !== "</DevNik>") {
-    link.classList.add('active');
-  }
+  link.classList.add('active');
   
   if (mobileNavigationIcon) {
     sidebarNivagationElement.classList.remove('to-left');
