@@ -8,7 +8,8 @@ const domElements = {
   "roleDescriptionElement": document.querySelector('.role-description'),
   "tabsListElement": document.querySelector('.tabs'),
   "projectsContentElement": document.querySelector('.projects .projects-content'),
-  "hiddenElements": document.querySelectorAll('.hidden')
+  "hiddenElements": document.querySelectorAll('.hidden'),
+  "copyEmailElement": document.querySelector('.contacts-content .copy-icon')
 }
 
 export default domElements;
