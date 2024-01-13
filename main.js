@@ -1,5 +1,5 @@
 import domElements from "./src/scripts/domElements";
-import clearActiveElements from './src/scripts/utils';
+import {clearActiveElements, getParentSectionId} from './src/scripts/utils';
 
 import navigation from "./src/scripts/navigation";
 
@@ -9,12 +9,6 @@ import projectsData from './src/data/projects.json';
 navigation();
 
 const roleDescriptionElement = document.querySelector('.role-description');
-
-const getParentSectionId = (childElement) => {
-  if (childElement.tagName === 'ARTICLE') {
-    return childElement.parentNode.parentNode.id;
-  }
-}
 
 //handle experience tab items
 const tabsListElement = document.querySelector('.tabs');

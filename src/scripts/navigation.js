@@ -1,5 +1,5 @@
 import domElements from "./domElements";
-import clearActiveElements from "./utils";
+import {clearActiveElements} from "./utils";
 
 const navigation = (() => {
   if (domElements.mobileNavigationIcon) {
