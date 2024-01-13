@@ -1,7 +1,7 @@
-import domElements from "./domElements";
+const copyEmailElement = document.querySelector('.contacts-content .copy-icon');
 
 const contacts = () => {
-  domElements.copyEmailElement.addEventListener('click', (e) => {
+  copyEmailElement.addEventListener('click', (e) => {
     if (e.target.tagName !== 'A') {
       const emailText = copyEmailElement.parentNode.parentNode.querySelector('a').textContent;
       navigator.clipboard.writeText(emailText);
