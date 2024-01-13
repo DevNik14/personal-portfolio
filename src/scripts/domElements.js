@@ -6,7 +6,8 @@ const domElements = {
   "navigationElement": document.querySelector('.site-navigation ul'),
   "scrollToTopElement": document.querySelector('.scroll-to-top'),
   "roleDescriptionElement": document.querySelector('.role-description'),
-  "tabsListElement": document.querySelector('.tabs')
+  "tabsListElement": document.querySelector('.tabs'),
+  "projectsContentElement": document.querySelector('.projects .projects-content')
 }
 
 export default domElements;
