@@ -1,3 +1,5 @@
+import clearActiveElements from './src/scripts/utils';
+
 import rolesData from './src/data/roles.json';
 import projectsData from './src/data/projects.json';
 
@@ -17,8 +19,6 @@ if (mobileNavigationIcon) {
     mobileNavigationIcon.classList.toggle('open');
   })
 }
-
-const clearActiveElements = (elements) => [...elements].forEach(link => link.classList.remove('active'));
 
 navigationElement.addEventListener('click', (e) => {
   if(e.target.tagName === 'A') {
