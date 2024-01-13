@@ -219,7 +219,6 @@ projectsContentElement.appendChild(projectFragment);
 
 // end handle dynamic project section/
 
-let lastSectionInView = '';
 //add animations on scroll
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver(entries => {
@@ -230,8 +229,6 @@ const observer = new IntersectionObserver(entries => {
       if (sectionId && sectionId !== 'hero') {
         clearActiveElements(navigationLinkElements);
         navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
-        lastSectionInView = sectionId;
-        console.log(lastSectionInView);
       }
     }
   })
