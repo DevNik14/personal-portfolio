@@ -24,6 +24,7 @@ navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
   if (link.textContent.trim() !== "</DevNik>") {
     link.classList.add('active');
   }
+  
   if (mobileNavigationIcon) {
     sidebarNivagationElement.classList.remove('to-left');
     mobileNavigationIcon.classList.remove('open');
@@ -216,8 +217,9 @@ projectsData.forEach(project => {
 })
 projectsContentElement.appendChild(projectFragment);
 
-// end handle dynamic project section
+// end handle dynamic project section/
 
+let lastSectionInView = '';
 //add animations on scroll
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver(entries => {
@@ -228,6 +230,8 @@ const observer = new IntersectionObserver(entries => {
       if (sectionId && sectionId !== 'hero') {
         clearActiveElements(navigationLinkElements);
         navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
+        lastSectionInView = sectionId;
+        console.log(lastSectionInView);
       }
     }
   })
