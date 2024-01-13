@@ -406,8 +406,6 @@ i {
 }
 
 .scroll-to-top {
-  /* display: none; */
-  visibility: hidden;
   opacity: 0;
   position: absolute;
   bottom: 10px;
