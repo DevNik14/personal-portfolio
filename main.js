@@ -4,6 +4,7 @@ import projectsData from './src/data/projects.json';
 const sidebarNivagationElement = document.querySelector('.sidebar');
 const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
 const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
+const navigationElement = document.querySelector('.site-navigation ul');
 const currentHashLocation = window.location.hash.split('#')[1];
 const roleDescriptionElement = document.querySelector('.role-description');
 const scrollToTopElement = document.querySelector('.scroll-to-top');
@@ -19,15 +20,17 @@ if (mobileNavigationIcon) {
 
 const clearActiveElements = (elements) => [...elements].forEach(link => link.classList.remove('active'));
 
-navigationLinkElements.forEach(link => link.addEventListener('click', (e) => {
-  clearActiveElements(navigationLinkElements);
-  link.classList.add('active');
-  
+navigationElement.addEventListener('click', (e) => {
+  if(e.target.tagName === 'A') {
+    clearActiveElements(navigationLinkElements);
+    e.target.classList.add('active');
+  }
+
   if (mobileNavigationIcon) {
     sidebarNivagationElement.classList.remove('to-left');
     mobileNavigationIcon.classList.remove('open');
   }
-}))
+})
 
 if (currentHashLocation) {
   const currentSection = document.querySelector(`.${currentHashLocation}`);
