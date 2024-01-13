@@ -5,6 +5,8 @@ const domElements = {
   "currentHashLocation": window.location.hash.split('#')[1],
   "navigationElement": document.querySelector('.site-navigation ul'),
   "scrollToTopElement": document.querySelector('.scroll-to-top'),
+  "roleDescriptionElement": document.querySelector('.role-description'),
+  "tabsListElement": document.querySelector('.tabs')
 }
 
 export default domElements;

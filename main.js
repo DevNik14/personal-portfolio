@@ -2,65 +2,12 @@ import domElements from "./src/scripts/domElements";
 import {clearActiveElements, getParentSectionId} from './src/scripts/utils';
 
 import navigation from "./src/scripts/navigation";
+import roleTabs from "./src/scripts/roleTabs";
 
-import rolesData from './src/data/roles.json';
 import projectsData from './src/data/projects.json';
 
 navigation();
-
-const roleDescriptionElement = document.querySelector('.role-description');
-
-//handle experience tab items
-const tabsListElement = document.querySelector('.tabs');
-const experienceList = rolesData;
-
-Object.keys(experienceList)
-  .forEach(key => {
-    const liElement = document.createElement('li');
-    liElement.textContent = key;
-    liElement.classList.add('tab-items');
-    tabsListElement.appendChild(liElement);
-  });
-
-const initRoleList = (experienceKey = 'Upwork', isThereFirstTabItem = true) => {
-  if (isThereFirstTabItem) {
-    const firstItem = document.querySelector('.tabs .tab-items');
-    firstItem.classList.add('active');
-  }
-
-  const rolesFragment = document.createDocumentFragment();
-  const experienceListValues = Object.values(experienceList[experienceKey]);
-  const roleListElement = document.createElement('ul');
-  roleListElement.classList.add('role-list');
-  const roleH3Element = document.createElement('h3');
-  const rolePElement = document.createElement('p');
-  roleH3Element.textContent = experienceListValues[0];
-  rolesFragment.appendChild(roleH3Element);
-
-  rolePElement.textContent = `${experienceListValues[1]} - ${experienceListValues[2]}`;
-  rolesFragment.appendChild(rolePElement);
-  experienceListValues[3].forEach(x => {
-    const roleListItemElement = document.createElement('li');
-    roleListItemElement.textContent = x;
-    roleListItemElement.classList.add('role-item');
-    rolesFragment.appendChild(roleListItemElement);
-  })
-  roleListElement.appendChild(rolesFragment);
-  roleDescriptionElement.appendChild(roleListElement);
-}
-
-initRoleList();
-
-tabsListElement.addEventListener('click', (e) => {
-  if (e.target.classList.value == 'tab-items') {
-    const tabItems = document.querySelectorAll('.tab-items');
-    clearActiveElements(tabItems);
-    if (roleDescriptionElement.children[0]) roleDescriptionElement.children[0].remove();
-    e.target.classList.add('active');
-
-    initRoleList(e.target.textContent, false);
-  }
-})
+roleTabs();
 
 // handle dynamic project section
 const projectsContentElement = document.querySelector('.projects .projects-content');
