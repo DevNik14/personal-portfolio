@@ -1,9 +1,9 @@
 import domElements from "./domElements";
 
 import projectsData from '../data/projects.json';
+const projectFragment = document.createDocumentFragment();
 
 const projects = (() => {
-  const projectFragment = document.createDocumentFragment();
 
   projectsData.forEach(project => {
     // Create article element

@@ -1,32 +1,18 @@
 import domElements from "./src/scripts/domElements";
-import {clearActiveElements, getParentSectionId} from './src/scripts/utils';
+import { clearActiveElements, getParentSectionId } from "./src/scripts/utils";
 
 import navigation from "./src/scripts/navigation";
 import roleTabs from "./src/scripts/roleTabs";
 import projects from "./src/scripts/projects";
+import intersections from "./src/scripts/intersections";
 
 navigation();
 roleTabs();
 projects();
 
-//add animations on scroll
 const hiddenElements = document.querySelectorAll('.hidden');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      const sectionId = entry.target.id || getParentSectionId(entry.target);
-      if (sectionId && sectionId !== 'hero') {
-        clearActiveElements(domElements.navigationLinkElements);
-        domElements.navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
-      }
-    }
-  })
-}, { threshold: 0.5 })
 
-hiddenElements.forEach(el => observer.observe(el));
-
-//end add animations on scroll
+hiddenElements.forEach(el => intersections().observe(el));
 
 const copyEmailElement = document.querySelector('.contacts-content .copy-icon');
 

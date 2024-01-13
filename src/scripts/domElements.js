@@ -7,7 +7,8 @@ const domElements = {
   "scrollToTopElement": document.querySelector('.scroll-to-top'),
   "roleDescriptionElement": document.querySelector('.role-description'),
   "tabsListElement": document.querySelector('.tabs'),
-  "projectsContentElement": document.querySelector('.projects .projects-content')
+  "projectsContentElement": document.querySelector('.projects .projects-content'),
+  "hiddenElements": document.querySelectorAll('.hidden')
 }
 
 export default domElements;
