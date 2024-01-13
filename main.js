@@ -1,69 +1,12 @@
+import domElements from "./src/scripts/domElements";
+
 import clearActiveElements from './src/scripts/utils';
 
 import rolesData from './src/data/roles.json';
 import projectsData from './src/data/projects.json';
 
-const sidebarNivagationElement = document.querySelector('.sidebar');
-const mobileNavigationIcon = document.querySelector('.mobile-navigation-icon');
-const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
-const navigationElement = document.querySelector('.site-navigation ul');
-const currentHashLocation = window.location.hash.split('#')[1];
+
 const roleDescriptionElement = document.querySelector('.role-description');
-const scrollToTopElement = document.querySelector('.scroll-to-top');
-
-//handle navigation
-
-if (mobileNavigationIcon) {
-  mobileNavigationIcon.addEventListener('click', () => {
-    sidebarNivagationElement.classList.toggle('to-left');
-    mobileNavigationIcon.classList.toggle('open');
-  })
-}
-
-navigationElement.addEventListener('click', (e) => {
-  if(e.target.tagName === 'A') {
-    clearActiveElements(navigationLinkElements);
-    e.target.classList.add('active');
-  }
-
-  if (mobileNavigationIcon) {
-    sidebarNivagationElement.classList.remove('to-left');
-    mobileNavigationIcon.classList.remove('open');
-  }
-})
-
-if (currentHashLocation) {
-  const currentSection = document.querySelector(`.${currentHashLocation}`);
-  currentSection.scrollIntoView();
-
-  const isSectionSelected = navigationLinkElements
-    .find(link => link.textContent === currentHashLocation);
-
-  if (isSectionSelected) {
-    isSectionSelected.classList.add('active');
-  }
-}
-
-if (window.screen.width <= 768) {
-  window.addEventListener('scroll', (e) => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY >= 250) {
-      scrollToTopElement.classList.add('show');
-    } else {
-      scrollToTopElement.classList.remove('show');
-    }
-  })
-}
-
-if (scrollToTopElement) {
-  scrollToTopElement.addEventListener('click', () => {
-    const heroSection = document.querySelector('.hero')
-    heroSection.scrollIntoView();
-    window.location.hash = `#${heroSection.id}`;
-  })
-}
-
-//end handling navigation
 
 const getParentSectionId = (childElement) => {
   if (childElement.tagName === 'ARTICLE') {
@@ -228,8 +171,8 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add('show');
       const sectionId = entry.target.id || getParentSectionId(entry.target);
       if (sectionId && sectionId !== 'hero') {
-        clearActiveElements(navigationLinkElements);
-        navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
+        clearActiveElements(domElements.navigationLinkElements);
+        domElements.navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
       }
     }
   })
