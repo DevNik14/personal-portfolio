@@ -1,6 +1,6 @@
 import domElements from "./domElements";
 
-const contacts = (() => {
+const contacts = () => {
   domElements.copyEmailElement.addEventListener('click', (e) => {
     if (e.target.tagName !== 'A') {
       const emailText = copyEmailElement.parentNode.parentNode.querySelector('a').textContent;
@@ -16,6 +16,6 @@ const contacts = (() => {
       }, 2000)
     }
   })
-})
+}
 
 export default contacts;

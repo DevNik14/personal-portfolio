@@ -1,7 +1,7 @@
 import {clearActiveElements, getParentSectionId} from './utils.js';
 import domElements from "./domElements";
 
-const intersections = (() => {
+const intersections = () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -16,6 +16,6 @@ const intersections = (() => {
   }, { threshold: 0.5 })
   
   return observer;
-})
+}
 
 export default intersections;

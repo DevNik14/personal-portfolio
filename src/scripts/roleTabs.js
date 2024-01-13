@@ -1,7 +1,7 @@
 import rolesData from '../data/roles.json';
 import domElements from './domElements';
 
-const roleTabs = (() => {
+const roleTabs = () => {
   Object.keys(rolesData)
     .forEach(key => {
       const liElement = document.createElement('li');
@@ -49,6 +49,6 @@ const roleTabs = (() => {
       initRoleList(e.target.textContent, false);
     }
   })
-})
+}
 
 export default roleTabs;

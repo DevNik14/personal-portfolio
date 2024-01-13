@@ -3,7 +3,7 @@ import domElements from "./domElements";
 import projectsData from '../data/projects.json';
 const projectFragment = document.createDocumentFragment();
 
-const projects = (() => {
+const projects = () => {
 
   projectsData.forEach(project => {
     // Create article element
@@ -95,6 +95,6 @@ const projects = (() => {
     projectFragment.appendChild(article);
   })
   domElements.projectsContentElement.appendChild(projectFragment);
-})
+}
 
 export default projects;
