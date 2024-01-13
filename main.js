@@ -1,10 +1,12 @@
 import domElements from "./src/scripts/domElements";
-
 import clearActiveElements from './src/scripts/utils';
+
+import navigation from "./src/scripts/navigation";
 
 import rolesData from './src/data/roles.json';
 import projectsData from './src/data/projects.json';
 
+navigation();
 
 const roleDescriptionElement = document.querySelector('.role-description');
 
