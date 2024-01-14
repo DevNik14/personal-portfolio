@@ -1,7 +1,7 @@
-import domElements from "./domElements";
-
 import projectsData from '../data/projects.json';
 const projectFragment = document.createDocumentFragment();
+const projectsContentElement = document.querySelector('.projects .projects-content');
+
 
 const projects = () => {
 
@@ -94,7 +94,7 @@ const projects = () => {
 
     projectFragment.appendChild(article);
   })
-  domElements.projectsContentElement.appendChild(projectFragment);
+  projectsContentElement.appendChild(projectFragment);
 }
 
 export default projects;
