@@ -1,5 +1,6 @@
 import rolesData from '../data/roles.json';
 import domElements from './domElements';
+import { clearActiveElements } from './utils';
 
 const roleTabs = () => {
   Object.keys(rolesData)
