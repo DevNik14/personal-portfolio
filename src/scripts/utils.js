@@ -3,5 +3,7 @@ export const clearActiveElements = (elements) => [...elements].forEach(link => l
 export const getParentSectionId = (childElement) => {
   if (childElement.tagName === 'ARTICLE') {
     return childElement.parentNode.parentNode.id;
+  } else if(childElement.classList.contains('hero-line')) {
+    return childElement.parentNode.id;
   }
 }
