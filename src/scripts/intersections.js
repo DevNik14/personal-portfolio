@@ -13,7 +13,6 @@ const intersections = () => {
           navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
         } else if (sectionId === 'hero') {
           clearActiveElements(navigationLinkElements);
-          window.location.hash = '';
         }
       }
     })
