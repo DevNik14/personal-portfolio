@@ -1,6 +1,8 @@
 import rolesData from '../data/roles.json';
-import domElements from './domElements';
 import { clearActiveElements } from './utils';
+
+const roleDescriptionElement = document.querySelector('.role-description');
+const tabsListElement = document.querySelector('.tabs');
 
 const roleTabs = () => {
   Object.keys(rolesData)
@@ -8,7 +10,7 @@ const roleTabs = () => {
       const liElement = document.createElement('li');
       liElement.textContent = key;
       liElement.classList.add('tab-items');
-      domElements.tabsListElement.appendChild(liElement);
+      tabsListElement.appendChild(liElement);
     });
 
   const initRoleList = (experienceKey = 'Upwork', isThereFirstTabItem = true) => {
@@ -35,16 +37,16 @@ const roleTabs = () => {
       rolesFragment.appendChild(roleListItemElement);
     })
     roleListElement.appendChild(rolesFragment);
-    domElements.roleDescriptionElement.appendChild(roleListElement);
+    roleDescriptionElement.appendChild(roleListElement);
   }
 
   initRoleList();
 
-  domElements.tabsListElement.addEventListener('click', (e) => {
+  tabsListElement.addEventListener('click', (e) => {
     if (e.target.classList.value == 'tab-items') {
       const tabItems = document.querySelectorAll('.tab-items');
       clearActiveElements(tabItems);
-      if (domElements.roleDescriptionElement.children[0]) domElements.roleDescriptionElement.children[0].remove();
+      if (roleDescriptionElement.children[0]) roleDescriptionElement.children[0].remove();
       e.target.classList.add('active');
 
       initRoleList(e.target.textContent, false);

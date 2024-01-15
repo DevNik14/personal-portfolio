@@ -1,5 +1,6 @@
 import {clearActiveElements, getParentSectionId} from './utils.js';
-import domElements from "./domElements";
+
+const navigationLinkElements = [...document.querySelectorAll('.nav-link')];
 
 const intersections = () => {
   const observer = new IntersectionObserver(entries => {
@@ -8,8 +9,8 @@ const intersections = () => {
         entry.target.classList.add('show');
         const sectionId = entry.target.id || getParentSectionId(entry.target);
         if (sectionId && sectionId !== 'hero') {
-          clearActiveElements(domElements.navigationLinkElements);
-          domElements.navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
+          clearActiveElements(navigationLinkElements);
+          navigationLinkElements.find(link => link.textContent === sectionId).classList.add('active');
         }
       }
     })
