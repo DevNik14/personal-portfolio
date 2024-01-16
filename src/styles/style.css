@@ -441,7 +441,7 @@ i {
   }
 }
 
-@media (width <=768px) {
+@media (width <= 768px) {
   a:hover {
     color: var(--main-color);
   }
@@ -536,7 +536,7 @@ i {
   }
 }
 
-@media (width <=600px) {
+@media (width <= 600px) {
   .experience {
     display: block;
   }
@@ -552,5 +552,15 @@ i {
 
   .tabs li {
     margin-right: 10px;
+  }
+}
+
+@media(width <= 280px) {
+  .sidebar {
+    height: 100%;
+  }
+
+  .mobile-navigation-icon {
+    right: -85px;
   }
 }
