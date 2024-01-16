@@ -364,7 +364,7 @@ i {
   margin: 0 0 20px;
 }
 
-.contacts-content > div {
+.contacts-content>div {
   position: relative;
   margin-top: 50px;
   padding: 1.25rem 3.5rem 1.25rem 1.75rem;
@@ -441,7 +441,7 @@ i {
   }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
   a:hover {
     color: var(--main-color);
   }
@@ -536,7 +536,7 @@ i {
   }
 }
 
-@media (width <= 600px) {
+@media (width <=600px) {
   .experience {
     display: block;
   }
@@ -555,12 +555,56 @@ i {
   }
 }
 
-@media(width <= 280px) {
+@media(width <=280px) {
+  body {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .sidebar {
+    font-size: 0.95rem;
+  }
+
+  p,
+  .about-content,
+  .role-list li,
+  .project-card,
+  .contacts-content {
+    max-width: 240px;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .links-to {
+    margin: 10px 0;
+  }
+
   .sidebar {
     height: 100%;
   }
 
   .mobile-navigation-icon {
-    right: -85px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    top: 35px;
+  }
+
+  .contacts-content>div {
+    padding: 1.25rem 1rem;
+    display: block;
+  }
+
+  .copy-icon {
+    display: none;
+  }
+
+  .scroll-to-top {
+    right: 22px;
   }
 }
