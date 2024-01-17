@@ -12,6 +12,8 @@ const navigation = (() => {
   mobileNavigationIcon.addEventListener('click', () => {
     sidebarNivagationElement.classList.toggle('to-left');
     mobileNavigationIcon.classList.toggle('open');
+    document.querySelector('.content').classList.toggle('blured');
+    document.querySelector('body').classList.toggle('stop-scrolling');
   })
 }
 
@@ -24,6 +26,8 @@ navigationElement.addEventListener('click', (e) => {
   if (mobileNavigationIcon) {
     sidebarNivagationElement.classList.remove('to-left');
     mobileNavigationIcon.classList.remove('open');
+    document.querySelector('.content').classList.remove('blured');
+    document.querySelector('body').classList.remove('stop-scrolling');
   }
 })
 
