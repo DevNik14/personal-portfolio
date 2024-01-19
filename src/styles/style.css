@@ -275,8 +275,12 @@ i {
   min-height: 500px;
 }
 
-.tabs li {
+.tabs .tab-items span {
   cursor: pointer;
+}
+
+.tabs li {
+  margin-bottom: 10px;
 }
 
 .tabs li.active {
@@ -310,8 +314,7 @@ i {
   -webkit-border-radius: 50%;
 }
 
-.role-list li,
-.tabs li {
+.role-list li {
   margin-top: 10px;
 }
 

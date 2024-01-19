@@ -8,8 +8,10 @@ const roleTabs = () => {
   Object.keys(rolesData)
     .forEach(key => {
       const liElement = document.createElement('li');
-      liElement.textContent = key;
+      const span = document.createElement('span');
+      span.textContent = key;
       liElement.classList.add('tab-items');
+      liElement.appendChild(span);
       tabsListElement.appendChild(liElement);
     });
 
@@ -43,11 +45,13 @@ const roleTabs = () => {
   initRoleList();
 
   tabsListElement.addEventListener('click', (e) => {
-    if (e.target.classList.value == 'tab-items') {
+    if (e.target.tagName == 'SPAN') {
       const tabItems = document.querySelectorAll('.tab-items');
       clearActiveElements(tabItems);
-      if (roleDescriptionElement.children[0]) roleDescriptionElement.children[0].remove();
-      e.target.classList.add('active');
+      if (roleDescriptionElement.children[0]) {
+        roleDescriptionElement.children[0].remove();
+      }
+      e.target.parentNode.classList.add('active');
 
       initRoleList(e.target.textContent, false);
     }
