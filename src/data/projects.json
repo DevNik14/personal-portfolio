@@ -1,11 +1,13 @@
 [
   {
-    "project-title": "Recipe Realm",
+    "project-title": "Project-title",
     "project-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloribus voluptate labore maxime, non cum? Earum praesentium distinctio non consequuntur hic, iure voluptates nobis voluptas eaque sint officiis quis adipisci.",
     "used-technologies-list": [
-      "React"
+      "JS",
+      "JS",
+      "JS"
     ],
-    "url-github": "https://github.com/DevNik14/recipe-realm",
+    "url-github": "https://github.com/DevNik14",
     "url-to-project": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/",
     "img-src": "./src/assets/images/test-project-image.png"
   },
