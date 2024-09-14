@@ -1,10 +1,10 @@
 [
   {
-    "project-title": "Budget Buddy AI",
+    "project-title": "Project-title",
     "project-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloribus voluptate labore maxime, non cum? Earum praesentium distinctio non consequuntur hic, iure voluptates nobis voluptas eaque sint officiis quis adipisci.",
-    "used-technologies-list": ["React"],
-    "url-github": "https://github.com/DevNik14/budget-buddy-ai",
-    "url-to-project": "https://github.com/DevNik14/budget-buddy-ai",
+    "used-technologies-list": ["JS", "JS", "JS"],
+    "url-github": "https://github.com/DevNik14",
+    "url-to-project": "https://www.linkedin.com/in/nikolay-kyurchiyski-47b916153/",
     "img-src": "./src/assets/images/test-project-image.png"
   },
   {
